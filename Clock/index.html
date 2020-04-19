@@ -18,6 +18,11 @@ function checkTime(i) {
 }
 </script>
 <style>
+#background {
+	background-image: url(https://bestanimations.com/Nature/Water/rain/rain-water-animated-gif.gif);
+    background-size: cover;
+    height: 100vh;
+}
 #uno {
 	color: rgb(244,93,34);
     padding-top: 20vw;
@@ -30,12 +35,9 @@ function checkTime(i) {
 }
 </style>
 
-<body style="background-color: rgb(0,0,0)"onload="startTime()">
-
+<body onload="startTime()">
+<div id="background">
 <center>
 <h1 id="uno">The Time Is</h1>
 <h1 id="dos"></h1>
 </center>
-
-</body>
-</html>
