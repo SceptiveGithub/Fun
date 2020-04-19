@@ -1,2 +1,41 @@
-<h1>Products</h1>
-<p>We have developed more than 10 products till now.</p>
+<!DOCTYPE html>
+<html>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById("dos").innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<style>
+#uno {
+	color: rgb(244,93,34);
+    padding-top: 20vw;
+    font-family: Courier New;
+}
+#dos {
+	color: rgb(244,93,34);
+    padding-top: 0vw;
+    font-family: Courier New;
+}
+</style>
+
+<body style="background-color: rgb(0,0,0)"onload="startTime()">
+
+<center>
+<h1 id="uno">The Time Is</h1>
+<h1 id="dos">The Time Is</h1>
+</center>
+
+</body>
+</html>
